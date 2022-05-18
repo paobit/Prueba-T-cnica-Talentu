@@ -2,32 +2,32 @@
 
 Read one item with ID:
 ```
-GET http://localhost/api/product/read_one?id=XXX
+GET http://localhost/api/usuarios/oferta_laboral/read_one?id=XXX
 ```
 
 Search for a item with search string:
 ```
-GET http://localhost/api/product/search?s=XXX
+GET http://localhost/api/usuarios/oferta_laboral/search?s=XXX
 ```
 
 Read all items:
 ```
-GET http://localhost/api/product/read
+GET http://localhost/api/usuarios/oferta_laboral/read
 ```
 
 Read all items that are in stock:
 ```
-GET http://localhost/api/product/read_in_stock
+GET http://localhost/api/usuarios/read_in_candidatos
 ```
 
 Ordering one item with ID:
 ```
-POST http://localhost/api/product/order
+POST http://localhost/api/usuario/order
 ```
 Body
 ```
 {
-    "id" : "1"
+    "nombre" : "1"
 }
 ```
 Proxy With Caddyfile
