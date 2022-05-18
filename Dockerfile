@@ -1,10 +1,5 @@
-FROM mysql:8
+FROM abiosoft/caddy:php-no-stats
 
-COPY .env .
-COPY ./create_database.sql /docker-entrypoint-initdb.d
+COPY ./Caddyfile /etc/Caddyfile
 
-ENTRYPOINT ["docker-entrypoint.sh"]
-
-EXPOSE 3306 33060
-CMD ["mysqld","--default-authentication-plugin=mysql_native_password"]
-
+COPY ./api /srv/api
